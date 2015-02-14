@@ -74,11 +74,11 @@ public class Keyboard {
 		try {
 			return(Double.valueOf(inputStream.readLine().trim()).doubleValue());
 		} catch (Exception e) {
-				e.printStackTrace();
-				return 0.0;
+			e.printStackTrace();
+			return 0.0;
 		}
 	}
-	
+
 	/* Get a float from the user and return it */
 	public static float getFloat() {
 		try {
@@ -88,7 +88,7 @@ public class Keyboard {
 			return 0.0f;
 		}
 	}
-	
+
 	/* Get a string of text from the user and return it */
 	public static String getString() {
 		try {
@@ -98,7 +98,7 @@ public class Keyboard {
 			return "";
 		}
 	}
-	
+
 	/* Get a char from the user and return it */
 	public static char getCharacter() {
 		try {
@@ -112,14 +112,15 @@ public class Keyboard {
 			return (char)0;
 		}
 	}
-	
+
 	/* Get a boolean from the user and return it */
 	public static boolean getBoolean() {
-		try {
-			return(Boolean.valueOf(inputStream.readLine().trim()).booleanValue());
-		} catch (Exception e) {
-			e.printStackTrace();
-			return false;
+		while(true) {
+			try {
+				return(Boolean.valueOf(inputStream.readLine().trim()).booleanValue());
+			} catch (Exception e) {
+				System.out.println("Please input a valid Boolean");
+			}
 		}
 	}
 
