@@ -79,6 +79,24 @@ public class ScalableShapes {
 				System.out.println(nCharacters((4*i)-3,character));
 			}
 			break;
+		case 9: //house
+			for(int i=1; i<=height/2; i++) {
+				System.out.print(nCharacters((height-(2*(i))),' '));
+				System.out.println(nCharacters((4*i)-3,character));
+			}
+			for(int i=1; i<=height/2; i++) {
+				System.out.println(nCharacters(2*height-3, character));
+			}
+			break;
+		case 10: //arrow
+			for(int i=1; i<=height/2; i++) {
+				System.out.println(' ' + nCharacters(2*height-5, character));
+			}
+			for(int i=1; i<=height/2; i++) {
+				System.out.print(nCharacters(((2*i+height)-(height)-2),' '));
+				System.out.println(nCharacters((height*2+1)-(4*i),character));
+			}
+			break;
 		}
 	}
 }

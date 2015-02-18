@@ -14,8 +14,8 @@ public class ScalableShapesTest {
 		int shape; //shape the user would like
 		int height; //height of the shape
 		while(true) {
-			System.out.println("Please input the shape you would like: [1-8]"); 
-			shape = Keyboard.getInteger(1,8);
+			System.out.println("Please input the shape you would like: [1-10]"); 
+			shape = Keyboard.getInteger(1,10);
 			System.out.println("Please input the height: [1-100]");
 			height = Keyboard.getInteger(1,100);
 			System.out.println("Please input a character:");
