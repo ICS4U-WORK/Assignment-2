@@ -5,12 +5,35 @@ package scalableShapes;
  * @author macdja38
  */
 public class ScalableShapes {
+	/**
+	 * returns a string of characters of a given length
+	 * @param n length of string to return
+	 * @param characters characters to make it from
+	 * @return n long string of characters
+	 * @author macdja38
+	 */
 	public String nCharacters(int n, char characters) {
 		String returnString = "";
 		for(int j=0; j<n; j++) {
 			returnString+=characters;
 		}
 		return returnString;
+	}
+	/**
+	 * prints the shapes the draw function can draw
+	 * @author macdja38
+	 */
+	public void PrintShapes() {
+		System.out.println("1. Trangle");
+		System.out.println("2. Alt Trangle");
+		System.out.println("3. Pyramid");
+		System.out.println("4. Square");
+		System.out.println("5. Hollow Square");
+		System.out.println("6. Rectangle");
+		System.out.println("7. Diamond");
+		System.out.println("8. Spaceship");
+		System.out.println("9. House");
+		System.out.println("10. Arrow");
 	}
 	/**
 	 * 
@@ -59,7 +82,7 @@ public class ScalableShapes {
 				System.out.println(nCharacters(height*2, character));
 			}
 			break;
-		case 7:
+		case 7: //diamond
 			for(int i=1; i<=height/2+1; i++) {
 				System.out.print(nCharacters((height-(2*(i-1))),' '));
 				System.out.println(nCharacters((4*i)-3,character));
@@ -69,7 +92,7 @@ public class ScalableShapes {
 				System.out.println(nCharacters((4*i)-3,character));
 			}
 			break;
-		case 8:
+		case 8: //spaceship
 			for(int i=1; i<=height/2+1; i++) {
 				System.out.print(nCharacters(height-i,' '));
 				System.out.println(nCharacters((4*i)-3,character));
