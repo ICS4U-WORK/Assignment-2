@@ -6,6 +6,22 @@ package scalableShapes;
  */
 public class ScalableShapes {
 	/**
+	 * shape to draw
+	 * 	1. Trangle
+	 *	2. Alt Trangle
+	 *	3. Pyramid
+	 *	4. Square
+	 *	5. Hollow Square
+	 *	6. Rectangle
+	 *	7. Diamond
+	 *	8. Spaceship
+	 *	9. House
+	 *	10. Arrow
+	 */
+	private int Shape;
+	private int Height;
+	private char Character;
+	/**
 	 * returns a string of characters of a given length
 	 * @param n length of string to return
 	 * @param characters characters to make it from
@@ -18,6 +34,15 @@ public class ScalableShapes {
 			returnString+=characters;
 		}
 		return returnString;
+	}
+	public void SetShape(int shape) {
+		 Shape = shape;
+	}
+	public void SetHeight(int height) {
+		Height = height;
+	}
+	public void SetChar(char character) {
+		Character = character;
 	}
 	/**
 	 * prints the shapes the draw function can draw
@@ -43,81 +68,81 @@ public class ScalableShapes {
 	 * @return shape is drawn to console
 	 * @author macdja38
 	 */
-	public void Draw(int shape, int height, char character) {
-		switch (shape) {
+	public void Draw() {
+		switch (Shape) {
 		case 1: //triangle
-			for(int i=1; i<=height; i++) {
-				System.out.println(nCharacters(i,character));
+			for(int i=1; i<=Height; i++) {
+				System.out.println(nCharacters(i,Character));
 			}
 			break;
 		case 2: //alternate triangle 
-			for(int i=1; i<=height; i++) {
-				System.out.println(nCharacters((2*i)-1,character));
+			for(int i=1; i<=Height; i++) {
+				System.out.println(nCharacters((2*i)-1,Character));
 			}
 			break;
 		case 3: //pyramid; line based
-			for(int i=1; i<=height; i++) {
-				System.out.print(nCharacters(height-i,' '));
-				System.out.println(nCharacters((2*i)-1,character));
+			for(int i=1; i<=Height; i++) {
+				System.out.print(nCharacters(Height-i,' '));
+				System.out.println(nCharacters((2*i)-1,Character));
 			}
 			break;
 		case 4: //square
-			for(int i=1; i<=height; i++) {
-				System.out.println(nCharacters(height, character));
+			for(int i=1; i<=Height; i++) {
+				System.out.println(nCharacters(Height, Character));
 			}
 			break;
 		case 5: //hollow square
-			System.out.println(nCharacters(height, character));
-			for(int i=1; i<=height-2; i++) {
-				System.out.print(character);
-				System.out.print(nCharacters(height-2, ' '));
-				System.out.println(character);
+			System.out.println(nCharacters(Height, Character));
+			for(int i=1; i<=Height-2; i++) {
+				System.out.print(Character);
+				System.out.print(nCharacters(Height-2, ' '));
+				System.out.println(Character);
 			}
-			if(height>1) {
-				System.out.println(nCharacters(height, character));
+			if(Height>1) {
+				System.out.println(nCharacters(Height, Character));
 			}
 			break;
 		case 6: //rectangle
-			for(int i=1; i<=height; i++) {
-				System.out.println(nCharacters(height*2, character));
+			for(int i=1; i<=Height; i++) {
+				System.out.println(nCharacters(Height*2, Character));
 			}
 			break;
 		case 7: //diamond
-			for(int i=1; i<=height/2+1; i++) {
-				System.out.print(nCharacters((height-(2*(i-1))),' '));
-				System.out.println(nCharacters((4*i)-3,character));
+			for(int i=1; i<=Height/2+1; i++) {
+				System.out.print(nCharacters((Height-(2*(i-1))),' '));
+				System.out.println(nCharacters((4*i)-3,Character));
 			}
-			for(int i=height/2; i>0; i--) {
-				System.out.print(nCharacters(height-2*(i-1),' '));
-				System.out.println(nCharacters((4*i)-3,character));
+			for(int i=Height/2; i>0; i--) {
+				System.out.print(nCharacters(Height-2*(i-1),' '));
+				System.out.println(nCharacters((4*i)-3,Character));
 			}
 			break;
 		case 8: //spaceship
-			for(int i=1; i<=height/2+1; i++) {
-				System.out.print(nCharacters(height-i,' '));
-				System.out.println(nCharacters((4*i)-3,character));
+			for(int i=1; i<=Height/2+1; i++) {
+				System.out.print(nCharacters(Height-i,' '));
+				System.out.println(nCharacters((4*i)-3,Character));
 			}
-			for(int i=height/2; i>0; i--) {
-				System.out.print(nCharacters(height-i,' '));
-				System.out.println(nCharacters((4*i)-3,character));
+			for(int i=Height/2; i>0; i--) {
+				System.out.print(nCharacters(Height-i,' '));
+				System.out.println(nCharacters((4*i)-3,Character));
 			}
 			break;
 		case 9: //house
-			for(int i=1; i<=height/2; i++) {
-				System.out.print(nCharacters((height-(2*(i))),' '));
-				System.out.println(nCharacters((4*i)-3,character));
+			for(int i=1; i<=Height/2; i++) {
+				System.out.print(nCharacters((Height-(2*(i))),' '));
+				System.out.println(nCharacters((4*i)-3,Character));
 			}
-			for(int i=1; i<=height/2; i++) {
-				System.out.println(nCharacters(2*height-3, character));
+			for(int i=1; i<=Height/2; i++) {
+				System.out.println(nCharacters(2*Height-3, Character));
 			}
 			break;
 		case 10: //arrow
-			for(int i=1; i<=height/2; i++) {
-				System.out.println(' ' + nCharacters(2*height-5, character));
+			for(int i=1; i<=Height/2; i++) {
+				System.out.println(' ' + nCharacters(2*Height-5, Character));
 			}
-			for(int i=1; i<=height/2; i++) {
-				System.out.print(nCharacters(((2*i+height)-(height)-2),' '));
-				System.out.println(nCharacters((height*2+1)-(4*i),character));
+			for(int i=1; i<=Height/2; i++) {
+				System.out.print(nCharacters(((2*i+Height)-(Height)-2),' '));
+				System.out.println(nCharacters((Height*2+1)-(4*i),Character));
 			}
 			break;
 		}
