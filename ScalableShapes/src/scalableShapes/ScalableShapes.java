@@ -1,7 +1,8 @@
 package scalableShapes;
 
 /**
- * Class for drawing a shape and support code
+ * Class for drawing a shape and support functions.
+ * contains Draw, setShape, setChar, SetHeight, PrintShapes.
  * @author macdja38
  */
 public class ScalableShapes {
@@ -28,7 +29,7 @@ public class ScalableShapes {
 	 * @return n long string of characters
 	 * @author macdja38
 	 */
-	public String nCharacters(int n, char characters) {
+	private String nCharacters(int n, char characters) {
 		String returnString = "";
 		for(int j=0; j<n; j++) {
 			returnString+=characters;

@@ -1,9 +1,9 @@
 package scalableShapes;
 
 /**
- * code to test ScalableShapes code, requests filtered input from the user and passes ScalableShapes known valid parameters
+ * code to test scalableShapes code, requests filtered input from the user using keyboard class
+ *  and passes ScalableShapes known valid parameters then calls Draw()
  * @author macdja38
- *
  */
 public class ScalableShapesTest {
 	public static void main(String args[]) {
